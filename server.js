@@ -17,16 +17,25 @@ app.get('/', function(req,res) {
 app.get('/secondAnswer', function(req,res) {
     res.sendFile(__dirname + '/secondpage.html')
 })
+app.get('/error', function(req,res) {
+    res.sendFile(__dirname + '/secondpage.html')
+})
     
 app.post("/firstAnswer", urlencodedParser, function (request, response) {
     if (request.body.answer == 5) {
         return response.redirect('/secondAnswer')
-    } else response.send("Try again!")
+    } else {
+       // response.send("Try again!")
+       //response.send('<script>alert("Incorrect answer!")</script>')
+       response.redirect(301, 'back')
+    }
 })
 app.post("/secondAnswer", urlencodedParser, function (request, response) {
     if (request.body.answer == 6) {
-        return response.send("Great!")
-    } else response.send("Try again!")
+        return response.send("<h1>Great!</h1>")
+    } else {
+        response.redirect(301, 'back')
+    }
 })
 
 const server = app.listen(port, hostname, () => {

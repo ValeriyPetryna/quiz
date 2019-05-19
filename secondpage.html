@@ -5,7 +5,7 @@
   <title>Form2</title>
   <style>
 body {
-    background:rgba(53, 2, 2, 0.726); 
+    background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png); 
     opacity: 10;
 }
 H1 { 
@@ -13,6 +13,12 @@ H1 {
     font-family: Verdana, Arial, Helvetica, sans-serif; 
     color: #333366; 
     text-align: center;
+}
+H6 { 
+    font-size: 80%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color:white;
+    text-align: left;
 }
 .form-group {
     width: 100%;
@@ -24,21 +30,23 @@ H1 {
 }
 .button {
     position: relative;
-    top: 30px;
-    height:200px;
-    text-align: center;
+      top: 10px;
+      height:200px;
+      text-align: center;
 }
+
   </style>
  </head>
  <body>
      <h1>Well, try next one </h1>
-  <form method="POST" action="/secondAnswer">
-   <div class="form-group">
+  <form method="POST" action="/secondAnswer" id="form1">
+    <div class="form-group">
       <input type="text" name="answer" id="answer">
-      </div>
-      <div class="button">
-      <input type="submit" id="button" value="Submit">
-      </div>
+    </div>
+    <div class="button">
+            <button type="submit" form="form1" >Post the form</button>
+    </div>
   </form>
+  <h6>answer is number 6</h6>
  </body>
 </html>

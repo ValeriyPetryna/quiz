@@ -2,10 +2,10 @@
 <html>
   <meta charset="utf-8">
   <head>
-  <title>Form1</title>
+  <title>Incorrect answer!</title>
   <style>
     body {
-        background:url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+        background:blue;
         opacity: 10;
       }
         H1 { 
@@ -17,7 +17,7 @@
         H6 { 
             font-size: 120%; 
             font-family: Verdana, Arial, Helvetica, sans-serif; 
-            color:white;
+            color:blue; 
             text-align: center;
         }
       .form-group {
@@ -38,15 +38,11 @@
       </style>
  </head>
  <body>
-     <h1>Find answer on this page </h1>
+     <h1>It is incorrect answer! </h1>
   <form method="POST" action="/firstAnswer">
-   <div class="form-group">
-      <input type="text" name="answer" id="answer">
-      </div>
       <div class="button">
-      <input type="submit" id="button" value="Submit">
+      <input type="submit" id="button" value="Return back and try one more time!">
       </div>
   </form>
-  <h6>answer is number 5</h6>
  </body>
 </html>
