@@ -10,16 +10,16 @@ app.use(bodyParser.urlencoded({
     extended: true,
 }))
 
-app.use('/quiz', express.static('quiz'))
+app.use('/css', express.static('css'))
 app.get('/', function(req,res) {
     res.sendFile(__dirname + '/firstpage.html')
 })
 app.get('/secondAnswer', function(req,res) {
     res.sendFile(__dirname + '/secondpage.html')
 })
-app.get('/error', function(req,res) {
+/*app.get('/error', function(req,res) {
     res.sendFile(__dirname + '/secondpage.html')
-})
+})*/
     
 app.post("/firstAnswer", urlencodedParser, function (request, response) {
     if (request.body.answer == 5) {

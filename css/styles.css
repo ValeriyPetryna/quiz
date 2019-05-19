@@ -1,0 +1,30 @@
+body {
+  background:url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+H1 { 
+    font-size: 120%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #333366; 
+    text-align: center;
+}
+H6 { 
+    font-size: 120%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color:white;
+    text-align: center;
+}
+.form-group {
+  width: 100%;
+  padding-top: 1.5rem;
+  text-align:center;
+}
+
+.form-group input[type=text] {
+  width: 200px;
+}
+.button {
+position: relative;
+top: 30px;
+height:200px;
+text-align: center;
+}
