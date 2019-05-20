@@ -17,12 +17,12 @@ app.get('/', function(req,res) {
 app.get('/secondAnswer', function(req,res) {
     res.sendFile(__dirname + '/secondpage.html')
 })
-/*app.get('/error', function(req,res) {
-    res.sendFile(__dirname + '/secondpage.html')
-})*/
+app.get('/success', function(req,res) {
+    res.sendFile(__dirname + '/success.html')
+})
     
 app.post("/firstAnswer", urlencodedParser, function (request, response) {
-    if (request.body.answer == 5) {
+    if (request.body.answer == 'h5') {
         return response.redirect('/secondAnswer')
     } else {
        // response.send("Try again!")
@@ -31,8 +31,8 @@ app.post("/firstAnswer", urlencodedParser, function (request, response) {
     }
 })
 app.post("/secondAnswer", urlencodedParser, function (request, response) {
-    if (request.body.answer == 6) {
-        return response.send("<h1>Great!</h1>")
+    if (request.body.answer == 'b306d5') {
+        return response.redirect('/success')
     } else {
         response.redirect(301, 'back')
     }
