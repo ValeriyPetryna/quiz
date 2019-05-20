@@ -31,7 +31,7 @@ app.post("/firstAnswer", urlencodedParser, function (request, response) {
     }
 })
 app.post("/secondAnswer", urlencodedParser, function (request, response) {
-    if (request.body.answer == 'b306d5') {
+    if (request.body.answer == '7c7c7c') {
         return response.redirect('/success')
     } else {
         response.redirect(301, 'back')
