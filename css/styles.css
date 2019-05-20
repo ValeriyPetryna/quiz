@@ -1,30 +1,67 @@
 body {
-  background:url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIiBmaWxsPSJub25lIj4gIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM4Nzg3ODciLz48L3N2Zz4=), linear-gradient(180deg, hsla(0, 0%, 7%, .87), hsla(0, 0%, 7%, .87));
+  font-family: 'IBM Plex Mono', monospace;
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+  background-size: auto, auto, 150px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
 }
-H1 { 
-    font-size: 120%; 
-    font-family: Verdana, Arial, Helvetica, sans-serif; 
-    color: #333366; 
-    text-align: center;
+@media screen and (max-width: 720px) {
+  body > * {
+    display: none;
+  }
+  body:before {
+    content: "Open quiz on computer, not mobile!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
 }
-H6 { 
-    font-size: 120%; 
-    font-family: Verdana, Arial, Helvetica, sans-serif; 
-    color:white;
-    text-align: center;
+h1,h2,h3,h4,p {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  font-weight: 500;
+  position: relative;
+  word-break: break-word;
+}
+h5 {
+  margin: 10px;
+  font-size: 0.1em;
+  position: relative;
+  text-align: left;
+  opacity: 0;
 }
 .form-group {
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   text-align:center;
 }
-
 .form-group input[type=text] {
   width: 200px;
 }
 .button {
 position: relative;
-top: 30px;
+top: 10px;
 height:200px;
 text-align: center;
+}
+#background-task {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: -1;
+  opacity: 0.1;
+}
+#background-task > span {
+  margin: 0.5em;
 }
